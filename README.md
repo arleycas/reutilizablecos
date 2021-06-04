@@ -23,6 +23,5 @@ $('.modal').modal({
 ### Limpiar input search y redibujar los datos de la tabla con codigo
 
 ```
-//Info usuarios hace referencia al id de la tabla
-$('#InfoUsuarios').DataTable().search('').draw();
+$('#id_de_tabla').DataTable().search('').draw();
 ```
