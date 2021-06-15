@@ -1,5 +1,34 @@
 # ReutilizableCod
 
+### Establecer zona horaria PHP
+```
+date_default_timezone_set('America/Bogota');
+```
+
+### No deja escribir letras al input
+```
+function soloLetras(e) {
+    key = e.keyCode || e.which;
+    tecla = String.fromCharCode(key).toLowerCase();
+    letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+    especiales = [8, 37, 39, 46];
+
+    tecla_especial = false
+    for(var i in especiales) {
+      if(key == especiales[i]) {
+          tecla_especial = true;
+          break;
+      }
+    }
+
+    if(letras.indexOf(tecla) == -1 && !tecla_especial)
+      return false;
+}
+
+<--- onkeypress="return soloLetras(event)" --->
+
+```
+
 ### No deja escribir numeros input
 
 ```
@@ -11,6 +40,10 @@ function validaNumericos(event) {
 }
 
 <--- onkeypress="return validaNumericos(event)" --->
+```
+### Mayusculas automaticas
+```
+<--- onkeyup="this.value = this.value.toUpperCase();" --->
 ```
 
 ### Fechas automaticas en input date
