@@ -1,5 +1,18 @@
 # ReutilizableCod
 
+### Mayusculas automáticas en input
+
+```
+function validaNumericos(event) {
+    if (event.charCode >= 48 && event.charCode <= 57) {
+        return true;
+    }
+    return false;
+}
+
+<--- onkeypress="return validaNumericos(event)" --->
+```
+
 ### Fechas automaticas en input date
 
 ```
