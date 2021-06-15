@@ -1,6 +1,6 @@
 # ReutilizableCod
 
-### Mayusculas automáticas en input
+### No deja escribir numeros input
 
 ```
 function validaNumericos(event) {
