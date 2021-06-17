@@ -3,6 +3,7 @@
 ### Establecer zona horaria PHP
 ```
 date_default_timezone_set('America/Bogota');
+$hoy = date("Y-m-d H:i:s");    // 2001-03-10 17:16:18 (el formato DATETIME de MySQL)
 ```
 
 ### No deja escribir letras al input
