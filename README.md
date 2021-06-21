@@ -42,6 +42,21 @@ function validaNumericos(event) {
 
 <--- onkeypress="return validaNumericos(event)" --->
 ```
+
+### No deja escribir espacios al input
+```
+function validarEspacio(e) {
+
+    if((e.code == 'Space') || (e.key == " ")) {
+        e.preventDefault();
+        return false; 
+    }       
+    return true;     
+}
+
+<--- onkeypress="validarEspacio(event)" --->
+```
+        
 ### Mayusculas automaticas
 ```
 <--- onkeyup="this.value = this.value.toUpperCase();" --->
