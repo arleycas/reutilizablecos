@@ -33,14 +33,21 @@ function soloLetras(e) {
 ### No deja escribir numeros input
 
 ```
-function validaNumericos(event) {
-    if (event.charCode >= 48 && event.charCode <= 57) {
+const inputSoloNum = (arrInputs = []) => {
+  arrInputs.forEach((element) => {
+    element.addEventListener('keypress', (e) => {
+      if (e.charCode >= 48 && e.charCode <= 57) {
         return true;
-    }
-    return false;
-}
+      }
+      e.preventDefault();
+      return false;
+    });
+  });
+};
 
-<--- onkeypress="return validaNumericos(event)" --->
+// Se le pasan todos los inputs que sean númericos
+inputSoloNum(document.querySelectorAll('.inp-solo-num'));
+
 ```
 
 ### No deja escribir espacios al input
