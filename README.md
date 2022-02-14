@@ -178,3 +178,6 @@ $('.modal').modal({
 ```
 $('#id_de_tabla').DataTable().search('').draw();
 ```
+
+``` pruebi ```
+
